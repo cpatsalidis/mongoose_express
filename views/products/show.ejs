@@ -24,7 +24,12 @@
         </li>
     </ul>
     <a href="/products/<%= product.id %>/edit">Edit</a>
-    <a href="/products">Back</a>
+    <a href="/products">Back</a><br><br>
+
+    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+
 
 </body>
 
