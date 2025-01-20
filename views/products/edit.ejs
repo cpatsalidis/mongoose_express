@@ -17,9 +17,9 @@
         <input type="text" id="price" name="price" placeholder="Product Price" value=<%=product.price %>><br>
         <label for="category">Category:</label><br>
         <select name="category" id="category" selected=<%=product.category%>>
-            <option value="fruit">Fruit</option>
-            <option value="vegetable">Vegetable</option>
-            <option value="dairy">Dairy</option>
+            <option value="fruit" <%=product.category==='fruit' ? 'selected' : '' %>>Fruit</option>
+            <option value="vegetable" <%=product.category==='vegetable' ? 'selected' : '' %>>Vegetable</option>
+            <option value="dairy" <%=product.category==='dairy' ? 'selected' : '' %>>Dairy</option>
         </select><br>
 
         <button type="submit">Update</button>
