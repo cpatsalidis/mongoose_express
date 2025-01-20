@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Product</title>
+    <title>Edit Product</title>
 </head>
 
 <body>
 
-    <h1>New Product</h1>
-    <form action="/products" method="POST">
+    <h1>Edit Product</h1>
+    <form action="/products/<%= product.id %>?_method=PUT" method="POST">
         <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Product Name"><br>
+        <input type="text" id="name" name="name" placeholder="Product Name" value="<%=product.name %>"><br>
         <label for="price">Price:</label><br>
-        <input type="text" id="price" name="price" placeholder="Product Price"><br>
+        <input type="text" id="price" name="price" placeholder="Product Price" value=<%=product.price %>><br>
         <label for="category">Category:</label><br>
-        <select name="category" id="category">
+        <select name="category" id="category" selected=<%=product.category%>>
             <option value="fruit">Fruit</option>
             <option value="vegetable">Vegetable</option>
             <option value="dairy">Dairy</option>
         </select><br>
 
-        <button type="submit">Create</button>
+        <button type="submit">Update</button>
     </form>
 
 </body>
