@@ -20,9 +20,13 @@
             <option value="fruit" <%=product.category==='fruit' ? 'selected' : '' %>>Fruit</option>
             <option value="vegetable" <%=product.category==='vegetable' ? 'selected' : '' %>>Vegetable</option>
             <option value="dairy" <%=product.category==='dairy' ? 'selected' : '' %>>Dairy</option>
-        </select><br>
+        </select><br><br>
 
         <button type="submit">Update</button>
+    </form><br>
+
+    <form action="/products/<%= product.id %>">
+        <button type="submit">Abort</button>
     </form>
 
 </body>
